@@ -67,6 +67,10 @@ int main(void) {
     for (i = 0; i < 8; i++) {
         printf("Enter score for %s (%s): ", sem1_codes[i], sem1_names[i]);
         scanf("%d", &sem1_scores[i]);
+        if (sem1_scores[i] < 0 || sem1_scores[i] > 100) {
+            printf("Invalid score entered\n");
+            return 1;
+        }
     }
 
     // ── Input: Semester two
@@ -74,10 +78,14 @@ int main(void) {
     for (i = 0; i < 8; i++) {
         printf("Enter score for %s (%s): ", sem2_codes[i], sem2_names[i]);
         scanf("%d", &sem2_scores[i]);
+        if (sem2_scores[i] < 0 || sem2_scores[i] > 100) {
+            printf("Invalid score entered\n");
+            return 1;
         }
+     }
     /* Validate input */
 
-    for (i = 0; i < 8; i++) {
+    /*for (i = 0; i < 8; i++) {
         if (sem1_scores[i] < 0 || sem1_scores[i] > 100) {
             printf("Invalid score entered\n");
             return 1;
@@ -89,7 +97,8 @@ int main(void) {
             printf("Invalid score entered\n");
             return 1;
         }
-    }
+    }*/
+    
     /* Determine grades and grade points */
 //double sem1_gpa = (double)sem1_weighted_sum / sem1_total_credits;
 //double sem2_gpa = (double)sem2_weighted_sum / sem12total_credits;
