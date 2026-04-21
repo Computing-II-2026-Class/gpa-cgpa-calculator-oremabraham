@@ -29,7 +29,7 @@ int main(void) {
     const char *sem1_codes[] = {
     "TEMB 1101", "TEMB 1102", "TEMB 1103", "TEMB 1104", "TEMB 1105", "TEMB 1106", "TEMB 1107", "TEMB 1108"
     };
-    const char *sem1_names[]{
+    const char *sem1_names[] = {
         "Fundamentals of Engineering Mathematics",
         "Biochemistry and Medical Physics",
         "Electrical Engineering Science",
@@ -128,7 +128,7 @@ int sem2_total_credits = 0, sem2_weighted_sum = 0;
     double cgpa = (double)total_weighted / total_credits;
 
     double sem1_gpa = (double)sem1_weighted_sum / sem1_total_credits;
-    double sem2_gpa = (double)sem2_weighted_sum / sem12total_credits;
+    double sem2_gpa = (double)sem2_weighted_sum / sem2_total_credits;
 
     /* Determine classification */
 const char *classification;
